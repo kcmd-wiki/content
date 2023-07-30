@@ -1,5 +1,5 @@
 
-# 1. 문자열 합치기
+# 문자열 합치기
 
 문자열 여럿이 주어졌을 때 문자열을 합치는 기술입니다.
 
@@ -10,7 +10,7 @@
 ```
 동적 명령어 실행이나 동적 JSON 출력에 활용이 가능합니다.
 
-## 1-1. `/enchant` 버그 이용
+## 1. `/enchant` 버그 이용
 
 `enchant` 명령어를 대상에게 사용시, 대상의 이름이 flatten되어 출력되는 버그를 이용합니다. ([MC-170355](https://bugs.mojang.com/browse/MC-170355))
 
@@ -68,7 +68,7 @@ tellraw @a {"storage":"str:","nbt":"output"}
 커맨드블록의 출력이 JSON 텍스트이기에 이 두 기호는 아주 불안정합니다.
 반대로 작은따옴표 기호는(`'`) 아무런 부작용 없이 멀쩡하니 가능하다면 이것을 이용하세요.
 
-## 1-2. 독서대 + 호버이벤트 이용
+## 2. 독서대 + 호버이벤트 이용
 
 표지판에서 리스트 전체 선택 경로(`list[]`)를 사용하면 콤마가 삽입되며 문자열이 합쳐진다는 점과
 
@@ -153,7 +153,7 @@ tellraw @a {"storage":"str:","nbt":"output"}
 
 큰따옴표(`"`), 역슬래시(`\`), 대괄호(`[`,`]`), 중괄호(`{`,`}`), 등호(`=`), 콜론(`:`), 슬래시(`/`), 해시(`#`), 공백(스페이스바) 기호중 하나라도 들어가면 고장나며,
 세미콜론(`;`)과 콤마(`,`) 기호는 자동으로 제거됩니다.
-작은따옴표(`'`) 기호 또한 들어가면 고장내지만 다른 일반적인 문자와 붙어있으면 고장내지 않습니다. (`abc'abc`)
+작은따옴표(`'`) 기호 또한 들어가면 고장나지만 다른 일반적인 문자와 붙어있으면 고장내지 않습니다. (`abc'abc`)
 
 이중에서 큰따옴표(`"`), 역슬래시(`\`), 작은따옴표(`'`) 기호를 제외하면은 고장 또는 제거를 피할수 있는 방법이 존재합니다.
 해당 기호가 포함되어있는 문자열을 글자단위로 분해한뒤, 해당 기호를 작은따옴표로 묶으면 됩니다.
@@ -176,7 +176,7 @@ tellraw @a {"storage":"str:","nbt":"output"}
  >>> "hello#world123"
 ```
 
-# 2. 동적 JSON
+## 3. 동적 JSON
 
 `enchant` 버그와 독서대 기술을 적절히 활용하면 동적으로 JSON 텍스트를 구성하는게 가능합니다.
 
@@ -184,11 +184,13 @@ tellraw @a {"storage":"str:","nbt":"output"}
 
 저장소에 저장된 명령어 문자열을 클릭이벤트로 등록할 수 있습니다.
 
-## 2-1. 동적 컬러
+### 기술 설명
+
+예를 들어, 동적 헥스 컬러를 만드는 것을 목표로 해봅시다.
 
 위에서 설명한 "enchant"와 "독서대"를 알고 있다는 전제 하에 진행합니다.
 
-예를 들어 다음과 같이 Lenient 문법으로 된 JSON 문자열을 `enchant`로 잘 합쳐서 만들고
+다음과 같이 Lenient 문법으로 된 JSON 문자열을 `enchant`로 잘 합쳐서 만들고
 ```
 "{text:ASDFSDAFASDFSAFD,color:'#123456'}"
 ```
@@ -199,6 +201,29 @@ tellraw @a {"storage":"str:","nbt":"output"}
 ```
 `tellraw` 등의 명령어에서 `"interpret":true`로 출력이 가능해집니다.
 
+클릭이벤트의 경우도 과정이 동일합니다.
+`enchant`를 이용하여 Lenient 문법의 JSON 텍스트를 생성한뒤 독서대에 넣고 `"interpret":true`로 출력하면 됩니다.
+
 ### 구현
 
-(공사중...)
+```mcfunction
+# load
+forceload add 0 0
+summon marker 0. 0 0. {UUID:[I;0,0,0,0]}
+setblock <표지판XYZ> oak_sign
+setblock <독서대XYZ> air
+setblock <독서대XYZ> lectern{Book:{id:"minecraft:written_book",Count:1b,tag:{pages:['""'],author:-,title:-}}}
+data modify storage str: booktag set value {pages:[''],resolved:0b}
+```
+
+```mcfunction
+# command block
+data modify storage str: input set value ["{color:'","#","FF8000","',text:ASDFGHJKL}"]
+data modify block <표지판XYZ> front_text.messages[0] set value '{"storage":"str:","nbt":"input","interpret":true}'
+data modify entity 0-0-0-0-0 CustomName set from block <표지판XYZ> front_text.messages[0]
+enchant 0-0-0-0-0 lure
+data modify storage str: booktag.pages[0] set string block -1 -60 181 LastOutput 89 -38
+data modify block <독서대XYZ> Book.tag merge from storage str: booktag
+data modify storage str: output set from block <독서대XYZ> Book.tag.pages[0]
+tellraw @a [{"storage":"str:","nbt":"output"}," >> ",{"storage":"str:","nbt":"output","interpret":true}]
+```
