@@ -28,7 +28,7 @@ enchant @e[name=abcde,limit=1] lure
 ```
 그리고 해당 커맨드블록의 출력을 `data get` 명령어로 확인해보면 이름이 합쳐져 있는것을 확인할 수 있습니다.
 ```mcfunction
-data get block &lt;XYZ&gt; LastOutput
+data get block <XYZ> LastOutput
 ```
 `data modify ... set string` 명령어를 이용해 이곳의 문자열을 추출하면, 합쳐진 문자열을 최종적으로 얻을수 있습니다.
 
