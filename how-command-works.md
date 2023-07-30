@@ -71,8 +71,8 @@ execute as @a at @s run ...
 2. `tick.json`으로 실행한 함수 또는 `서버 콘솔`로 실행한 경우: 
 
  * 대상은 'Server'로 설정됩니다(항상 영어).
- * 차원은 _minecraft:overworld_로 설정됩니다.
- * 절대 좌표 및 시선각은 설정된 _(set)worldspawn_을 기준으로 설정됩니다.
+ * 차원은 *minecraft:overworld*로 설정됩니다.
+ * 절대 좌표 및 시선각은 설정된 *(set)worldspawn*을 기준으로 설정됩니다.
 
 3. `커맨드블록`의 경우:
 
