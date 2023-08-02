@@ -56,7 +56,7 @@ data modify storage str: input set value ["aaa","bbb","ccc"]
 data modify block <표지판XYZ> front_text.messages[0] set value '{"storage":"str:","nbt":"input","interpret":true}'
 data modify entity 0-0-0-0-0 CustomName set from block <표지판XYZ> front_text.messages[0]
 enchant 0-0-0-0-0 lure
-data modify storage str: output set string block 7 -60 181 LastOutput 89 -38
+data modify storage str: output set string block <enchant커맨드블록XYZ> LastOutput 89 -38
 tellraw @a {"storage":"str:","nbt":"output"}
 ```
 
@@ -97,7 +97,7 @@ tellraw @a {"storage":"str:","nbt":"output"}
 
 <hr>
 
-그 다음, 호버이벤트의 문자열 합치기 기능을 소개합니다. 과거의 문법인 `values`를 이용할 때 문자열 대신 리스트를 넣을수가 있는데
+그 다음, 호버이벤트의 문자열 합치기 기능을 소개합니다. 과거의 문법인 `value`를 이용할 때 문자열 대신 리스트를 넣을수가 있는데
 ```
 '{"text":"a","hoverEvent":{"action":"show_item","value":"{tag:{asdf:1b}}"}}'
 '{"text":"a","hoverEvent":{"action":"show_item","value":["{tag:{asdf:1b}}"]}}'
@@ -227,7 +227,7 @@ data modify storage str: input set value ["{color:'","#","FF8000","',text:ASDFGH
 data modify block <표지판XYZ> front_text.messages[0] set value '{"storage":"str:","nbt":"input","interpret":true}'
 data modify entity 0-0-0-0-0 CustomName set from block <표지판XYZ> front_text.messages[0]
 enchant 0-0-0-0-0 lure
-data modify storage str: booktag.pages[0] set string block -1 -60 181 LastOutput 89 -38
+data modify storage str: booktag.pages[0] set string block <enchant커맨드블록XYZ> LastOutput 89 -38
 data modify block <독서대XYZ> Book.tag merge from storage str: booktag
 data modify storage str: output set from block <독서대XYZ> Book.tag.pages[0]
 tellraw @a [{"storage":"str:","nbt":"output"}," >> ",{"storage":"str:","nbt":"output","interpret":true}]
