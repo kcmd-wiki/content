@@ -26,11 +26,12 @@ summon marker ~ ~ ~ {CustomName:'["a","b","c","d","e"]'}
 ```mcfunction
 enchant @e[name=abcde,limit=1] lure
 ```
-그리고 해당 커맨드블록의 출력을 `data get` 명령어로 확인해보면 이름이 합쳐져 있는것을 확인할 수 있습니다.
+그리고 해당 커맨드블록의 출력을 `data get` 명령어로 확인해보면 `with` 오른쪽에 이름이 합쳐져 있는것을 확인할 수 있습니다.
 ```mcfunction
 data get block <XYZ> LastOutput
+ >>> '{"extra":[{"color":"red","extra":[{"translate":"commands.enchant.failed.entity","with":["abcde"]}],"text":""}],"text":"[21:49:29] "}'
 ```
-`data modify ... set string` 명령어를 이용해 이곳의 문자열을 추출하면, 합쳐진 문자열을 최종적으로 얻을수 있습니다.
+`data modify ... set string` 명령어를 이용해 이곳의 문자열을 잘라내면, 합쳐진 문자열을 최종적으로 얻을수 있습니다.
 
 이 버그를 이용하여 다음과 같은 과정으로 문자열 합치기가 가능합니다.
 
@@ -67,6 +68,10 @@ tellraw @a {"storage":"str:","nbt":"output"}
 역슬래시(`\`) 기호가 들어가면 역슬래시 두개로 불어납니다.
 커맨드블록의 출력이 JSON 텍스트이기에 이 두 기호는 아주 불안정합니다.
 반대로 작은따옴표 기호는(`'`) 아무런 부작용 없이 멀쩡하니 가능하다면 이것을 이용하세요.
+
+`data modify ... set string` 명령어의 `[start]` 인덱스가 현재 `89`로 입력되어 있으나,
+갑옷거치대(`armor_stand`)와 같이 엔티티가 손에 아이템을 들 수 있다면
+`enchant` 커맨드블록의 출력이 달라지므로 해당 인덱스를 `91`로 변경해야 정상적으로 작동합니다.
 
 ## 2. 독서대 + 호버이벤트 이용
 
