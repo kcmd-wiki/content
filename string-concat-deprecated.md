@@ -1,5 +1,5 @@
 
-- Deprecated
+### ※ Deprecated
 
 1.20.2 이상 버전에서는 매크로 사용을 권장
 
