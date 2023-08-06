@@ -2,9 +2,6 @@
 
 https://k-cmd-wiki.github.io/
 
-<br>
-<br>
-<br>
 
 ## 여기있는 파일들은 뭔가요?
 
@@ -30,18 +27,49 @@ https://k-cmd-wiki.github.io/
 
 파일을 추가하고 싶으면 Add file 버튼을 누르고, 파일을 수정하고 싶으면 펜 모양의 Edit this file 버튼을 누르면 편집창이 열립니다.
 
-그리고 파일을 작성한뒤 저장하면, 위키 사이트에 즉시 반영됩니다. 끝.
+그리고 파일을 작성한뒤 저장하면, 위키 사이트에 곧 반영될겁니다
 
 <br>
 
 ### 멤버가 아닌 경우
 
-> 더 상세히 적어주실 분 구함
+**1. 포크하기**
 
-1. 본인의 리포지토리로 포크
-2. 포크한 걸 원하는대로 편집
-3. 포크한 걸 풀리퀘스트
-4. 관리자가 승인할때까지 대기
+일단 본인의 리포지토리로 포크해야 합니다.
+
+왼쪽 위에 이렇게 생긴 버튼을 눌러주세요.
+
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/ef51ca32-73b9-4347-b99f-943fb55f94f9)
+
+
+**2. 수정하기**
+
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/fe8751ed-8fe3-4ab7-819b-bb98a0cba67d)
+
+
+양식을 채우고 초록색 버튼을 눌러주세요.
+
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/4665cb1a-7fee-4591-8c37-0474caf63aff)
+
+
+이렇게 되었다면 이제 자기가 수정/추가하고 싶은 파일을 만들고 수정하시면 됩니다.
+
+그리고 난 다음
+
+**3. 풀 리퀘스트**
+
+매인 화면 위쪽 탭에
+
+<img width="103" alt="image" src="https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/43aeff2a-4295-478b-8752-1b3538815363">
+
+이렇게 생긴 버튼을 눌러주세요. 그리고 초록색 New Pull Requests를 눌러주세요.
+
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/3abe0a62-2c7a-44d8-8433-5849a286eaef)
+
+변경사항에 대한 제목과 설명을 입력하고 초록색 버튼을 눌러주시면 끝입니다.
+
+이제 관리자가 이 풀 리퀘스트를 병합시키면 변경사항이 적용됩니다.
+
 
 <br>
 <br>
@@ -54,6 +82,9 @@ https://k-cmd-wiki.github.io/preview
 저장 기능이 없으므로 복사 붙여넣기를 사용하세요.
 마크다운 문법(.md)을 사용하는게 미숙하신 분들은 [관련 나무위키 문서](https://namu.wiki/w/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)를 읽고 오시면은 금방 익히실 수 있습니다
 
+여러분이 사용하시는 디스코드와 문법이 대부분 같습니다. 일반 마크다운과 차이가 있으니 [위 문서의 이 문단](https://namu.wiki/w/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4#s-4.1)을 참고해서 작성해주세요.
+
+**[!]** 이 위키는 백슬래쉬(\\) 줄바꿈을 사용할 수 없습니다!
 <br>
 <br>
 <br>
