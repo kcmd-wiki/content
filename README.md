@@ -39,15 +39,18 @@ https://k-cmd-wiki.github.io/
 
 왼쪽 위에 이렇게 생긴 버튼을 눌러주세요.
 
-<img src="https://raw.githubusercontent.com/plz-Enter-name/cmdwiki-fork/main-1/images/readme/fork_button.png">
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/ef51ca32-73b9-4347-b99f-943fb55f94f9)
+
 
 **2. 수정하기**
 
-<img src="https://raw.githubusercontent.com/plz-Enter-name/cmdwiki-fork/main-1/images/readme/creating_fork.png">
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/fe8751ed-8fe3-4ab7-819b-bb98a0cba67d)
+
 
 양식을 채우고 초록색 버튼을 눌러주세요.
 
-<img src="https://raw.githubusercontent.com/plz-Enter-name/cmdwiki-fork/main-1/images/readme/forked.png">
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/4665cb1a-7fee-4591-8c37-0474caf63aff)
+
 
 이렇게 되었다면 이제 자기가 수정/추가하고 싶은 파일을 만들고 수정하시면 됩니다.
 
@@ -55,15 +58,18 @@ https://k-cmd-wiki.github.io/
 
 **3. 풀 리퀘스트**
 
-![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/79249e0c-d4cb-4c65-abea-2a2b6b13a1f8)
+매인 화면 위쪽 탭에
 
-메인 화면으로 나가시면 이런 알림이 있어요. 이 알림에 있는 초록색 버튼을 눌러주세요.
+<img width="103" alt="image" src="https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/43aeff2a-4295-478b-8752-1b3538815363">
+
+이렇게 생긴 버튼을 눌러주세요. 그리고 초록색 New Pull Requests를 눌러주세요.
 
 ![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/3abe0a62-2c7a-44d8-8433-5849a286eaef)
 
-변경사항에 대한 제목과 설명을 입력하고 초록색 버튼을 눌러주시면 풀 리퀘스트 하기는 끝났습니다.
+변경사항에 대한 제목과 설명을 입력하고 초록색 버튼을 눌러주시면 끝입니다.
 
 이제 관리자가 이 풀 리퀘스트를 병합시키면 변경사항이 적용됩니다.
+
 
 <br>
 <br>
