@@ -1,5 +1,9 @@
-#execute as 이해하기
+# execute as 이해하기
+1. 순차적 실행이란?
+2. execute에서의 순차적 실행
+3. 결론
 
+## 순차적 실행이란?
 보통 커맨드를 다룰 때 순차의 개념은 필수적이다
 
 ```mcfunction
@@ -15,8 +19,10 @@ scoreboard players add @p asdf 1
 tp @p ~ ~100 ~
 ```
 scoreboard 명령어는 위치에 영향을 주지 않기에 scoreboard의 @p와 tp의 @p는 같을 수 밖에 없다\
-이것이 "순차적 실행"이라는 개념이다\
+이것이 "순차적 실행"이라는 개념이다
 
+
+## execute에서의 순차적 실행행
 1번 명령어
 ```mcfunction
 execute as @p at @s as @e[type=item] run setblock ~ ~ ~ stone
@@ -87,5 +93,6 @@ execute as @a[tag=player] at @s run tp @s ~ ~10 ~
 이렇게 된다면 as에서 A가 실행자일 때, @s는 A를 가리키므로 A는 A의 위치를 기준으로 10칸 위로 tp될 것이다.\
 B, C도 마찬가지다.\​
 
+## 결론
 이처럼 execute도 순차적으로 실행됨을 알지 못하면 커맨드를 만지는 것에 있어 오류는 필연적이다\
 항상 주의하자
