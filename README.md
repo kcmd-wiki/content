@@ -55,9 +55,15 @@ https://k-cmd-wiki.github.io/
 
 **3. 풀 리퀘스트**
 
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/79249e0c-d4cb-4c65-abea-2a2b6b13a1f8)
 
+메인 화면으로 나가시면 이런 알림이 있어요. 이 알림에 있는 초록색 버튼을 눌러주세요.
 
+![image](https://github.com/plz-Enter-name/cmdwiki-fork/assets/104212145/3abe0a62-2c7a-44d8-8433-5849a286eaef)
 
+변경사항에 대한 제목과 설명을 입력하고 초록색 버튼을 눌러주시면 풀 리퀘스트 하기는 끝났습니다.
+
+이제 관리자가 이 풀 리퀘스트를 병합시키면 변경사항이 적용됩니다.
 
 <br>
 <br>
