@@ -1,3 +1,5 @@
+#execute as 이해하기
+
 보통 커맨드를 다룰 때 순차의 개념은 필수적이다
 
 ```mcfunction
