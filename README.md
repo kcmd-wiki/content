@@ -1,13 +1,13 @@
-# k-cmd-wiki
+# kcmd-wiki
 
-https://k-cmd-wiki.github.io/
+https://kcmd-wiki.github.io/
 
 
 ## 여기있는 파일들은 뭔가요?
 
 위키 링크의 맨 뒤에 해시(`#`) 기호와 함께 어떤 문자열이 있으면 이 리포지토리에서 해당 이름의 .md 파일이 불러와집니다
 
-예를 들어 https://k-cmd-wiki.github.io/#test >>> [test.md](https://github.com/k-cmd-wiki/content/blob/main/test.md) 와 같이 연결됩니다.
+예를 들어 https://kcmd-wiki.github.io/#test >>> [test.md](https://github.com/kcmd-wiki/content/blob/main/test.md) 와 같이 연결됩니다.
 
 이곳에서 잘 완성된 문서는 협의를 통해 메인화면 버튼에 링크로 등록됩니다.
 
@@ -77,7 +77,7 @@ https://k-cmd-wiki.github.io/
 
 ## 마크다운 문법 연습장
 
-https://k-cmd-wiki.github.io/preview
+https://kcmd-wiki.github.io/preview
 
 저장 기능이 없으므로 복사 붙여넣기를 사용하세요.
 마크다운 문법(.md)을 사용하는게 미숙하신 분들은 [관련 나무위키 문서](https://namu.wiki/w/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)를 읽고 오시면은 금방 익히실 수 있습니다
