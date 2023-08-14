@@ -1,6 +1,9 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
+locale: "ko-KR"
 search: true
+title: "This Is Title"
+subtitle: "This Is Sub-title"
 
 plugins:
   - jekyll-paginate
@@ -18,7 +21,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments: false
+      read_time: true
+      comments: true
       share: true
-      related: false
+      related: true
