@@ -2,8 +2,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 locale: "ko-KR"
 search: true
-title: "This Is Title"
-subtitle: "This Is Sub-title"
+title: "KCMD WIKI"
 
 plugins:
   - jekyll-paginate
